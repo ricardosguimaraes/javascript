@@ -1,3 +1,5 @@
+# Plano de Estudo
+
 ### ETAPA 1: FUNDAMENTOS DO JAVASCRIPT
 
 **Aula 1: Introdução ao JavaScript**
