@@ -28,3 +28,5 @@ O plano é dividido em 8 partes, cada uma com um foco específico. Dentro de cad
 
 Estou pronto para começar essa jornada! Com dedicação, vou me tornar um especialista em JavaScript. 💪
 
+### Veja meu plano de estudo: [Clique aqui](plano-de-estudo.md)
+
