@@ -1,143 +1,179 @@
-# AULA 2: SINTAXE BÁSICA DO JAVASCRIPT
+### ETAPA 1: FUNDAMENTOS DO JAVASCRIPT
 
-## 🎯 Objetivos da Aula
-- Entender a estrutura básica de um arquivo JavaScript
-- Aprender a usar comentários de linha e de bloco
-- Conhecer os tipos de dados primitivos em JavaScript
-- Praticar a criação de variáveis e inspeção de tipos
+**Aula 1: Introdução ao JavaScript**
+- O que é JavaScript?
+- História e evolução
+- Configuração do ambiente (Node.js, VS Code)
 
----
+**Aula 2: Sintaxe Básica**
+- Comentários
+- Tipos de dados primitivos (string, number, boolean, null, undefined, Symbol)
 
-## 📚 TEORIA
+**Aula 3: Variáveis**
+- Declaration: var, let, const
+- Escopo de variáveis
 
-### 1. Comentários
-Comentários são ignorados pelo interpretador e servem para documentar o código.
+**Aula 4: Operadores**
+- Operadores aritméticos
+- Operadores de comparação
+- Operadores lógicos
 
-```javascript
-// Comentário de linha única
+**Aula 5: Estruturas de Controle**
+- Estruturas condicionais (if, else, switch)
+- Operador ternário
 
-/*
-  Comentário de
-  múltiplas linhas
-*/
-```
+**Aula 6: Loops**
+- Loop `for`
+- Loop `while`
+- Loop `do...while`
+- Loop `for...of`
 
-Boas práticas:
-- Use comentários para explicar **por que** algo é feito, não **o que** é feito (o código já mostra o que).
-- Mantenha-os atualizados: comentários desatualizados causam confusão.
-
-### 2. Tipos de Dados Primitivos
-
-| Tipo         | Exemplo                  | `typeof` |
-|--------------|--------------------------|----------|
-| `string`     | "Olá", 'JavaScript'     | string   |
-| `number`     | 3, 3.14, -10            | number   |
-| `boolean`    | true, false             | boolean  |
-| `null`       | null                    | object*  |
-| `undefined`  | undefined, var sem valor| undefined|
-| `symbol`     | Symbol('id')            | symbol   |
-| `bigint`**   | 10n, 9007199254740991n  | bigint   |
-
-*Curiosidade:* `typeof null` retorna `object` devido a um bug histórico que foi mantido para compatibilidade.
-
-**BigInt** permite trabalhar com inteiros muito grandes; disponível em navegadores/Node modernos.
-
-#### Conversões Implícitas e Explícitas
-
-```javascript
-String(123);   // '123'
-Number('42');  // 42
-Boolean(0);    // false
-```
+**Aula 7: Funções**
+- Definição e chamada de funções
+- Parâmetros e retorno
+- Funções anônimas e expressões de função
+- Arrow functions
 
 ---
 
-## 💻 PRÁTICA PASSO A PASSO
+### ETAPA 2: ARRAYS E OBJETOS
 
-### Passo 1 – Criar Variáveis e Usar `typeof`
+**Aula 8: Trabalhando com Arrays**
+- Criação e manipulação de arrays
+- Métodos de array (push, pop, shift, unshift, splice)
 
-```javascript
-// tipos.js
-let texto = "Hello";          // string
-let idade = 30;               // number
-let aprovado = true;          // boolean
-let vazio = null;             // null
-let naoDefinido;              // undefined
-let id = Symbol('id');        // symbol
-let grande = 12345678901234567890n; // bigint (opcional)
+**Aula 9: Métodos de Array Avançados**
+- Iteração com `forEach`, `map`, `filter`, `reduce`, `find`
 
-console.table({texto, idade, aprovado, vazio, naoDefinido, id, grande});
+**Aula 10: Objetos Literais**
+- Criação e estrutura de objetos
+- Propriedades e métodos
+- Acesso e manipulação de valores
 
-// Inspecionando os tipos
-console.log(typeof texto);        // string
-console.log(typeof idade);        // number
-console.log(typeof aprovado);     // boolean
-console.log(typeof vazio);        // object (bug histórico)
-console.log(typeof naoDefinido);  // undefined
-console.log(typeof id);           // symbol
-console.log(typeof grande);       // bigint
-```
-
-### Passo 2 – Comentários na Prática
-
-```javascript
-// comentarios.js
-
-// Calcula área de um círculo
-a = 5;                 // raio
-let area = Math.PI * a * a; // πr²
-console.log("Área:", area);
-```
-
-> Experimente remover ou alterar comentários para testar entendimento.
+**Aula 11: 'this' e Escopo**
+- O que é 'this'?
+- Diferenças no escopo de função e escopo global
 
 ---
 
-## 🏋️ EXERCÍCIOS
+### ETAPA 3: DOM E BOM
 
-1. Crie um script `dados.js` que declare variáveis para:
-   - Seu **nome** (string)
-   - Sua **idade** (number)
-   - Se você **está estudando JavaScript** (boolean)
-   - Uma variável **não inicializada**
-   - Uma variável **nula**
-   Exiba todas usando `console.table` e seus tipos com `typeof`.
+**Aula 12: Introdução ao DOM**
+- O que é o DOM?
+- Estrutura do DOM (árvore de nós)
 
-2. Faça um casting explícito:
-   - Converta sua idade para string.
-   - Converta a string "123" para número.
-   - Converta `0`, `1`, `""`, `"text"` para boolean e observe.
+**Aula 13: Seleção de Elementos**
+- Métodos de seleção (getElementById, querySelector, querySelectorAll)
 
-3. Explique com comentários, no seu código, o resultado de cada conversão.
+**Aula 14: Manipulação de Elementos**
+- Mudança de conteúdo e atributos (innerHTML, textContent)
+- Classes e estilo (classList, style)
 
----
+**Aula 15: Criação e Remoção de Elementos**
+- Criar elementos (createElement)
+- Adicionar e remover elementos do DOM
 
-## 🚀 DESAFIO DA AULA
+**Aula 16: Eventos**
+- O que são eventos?
+- Escutadores de eventos (addEventListener)
+- Eventos comuns: click, input, submit
 
-Crie um programa `detectorTipos.js` que:
-1. Receba (via `prompt` no navegador ou `readline` no Node) um valor digitado pelo usuário.
-2. Detecte e exiba:
-   - O valor digitado
-   - O seu **tipo primitivo** segundo `typeof`
-3. Informe se o valor é **truthy** ou **falsy**.
-
-Dica Node.js:
-```javascript
-const readline = require('readline').createInterface({input: process.stdin, output: process.stdout});
-readline.question('Digite algo: ', valor => {
-  console.log('Valor:', valor);
-  console.log('Tipo:', typeof valor);
-  console.log('É truthy?', Boolean(valor));
-  readline.close();
-});
-```
+**Aula 17: Event Delegation**
+- O que é delegação de eventos?
+- Implementação de delegação de eventos no DOM
 
 ---
 
-## 📝 RESUMO DA AULA
+### ETAPA 4: PROGRAMAÇÃO ASSÍNCRONA
 
-- Comentários ajudam na manutenção do código (`//` e `/* */`).
-- JavaScript possui **7 tipos primitivos**: string, number, boolean, null, undefined, symbol, bigint.
-- Use `typeof` para inspecionar tipos.
-- Conversões de tipo podem ser **explícitas** (`Number()`, `String()`, `Boolean()`) ou **implícitas** (coerção automática).
-- `null` é retornado como `object` em `typeof` — comportamento legado.
+**Aula 18: Introdução à Programação Assíncrona**
+- O que é programação assíncrona?
+- Callbacks
+
+**Aula 19: Promises**
+- O que são Promises?
+- Criando e manipulando Promises
+
+**Aula 20: Async/Await**
+- Introdução ao async/await
+- Como usar async/await para simplificar código assíncrono
+
+**Aula 21: Manipulação de APIs**
+- O que é uma API?
+- Usando Fetch API para fazer requisições
+
+---
+
+### ETAPA 5: ECOSSISTEMA E BACKEND
+
+**Aula 22: Introdução ao Node.js**
+- O que é Node.js?
+- Configuração do ambiente no Node.js
+
+**Aula 23: Criando um Servidor com Express**
+- O que é Express?
+- Criando suas primeiras rotas
+
+**Aula 24: API REST com Express**
+- Conceitos de REST
+- Implementando rotas GET, POST, PUT e DELETE
+
+**Aula 25: Bancos de Dados**
+- Conceito de bancos de dados
+- Introdução ao MongoDB e Mongoose
+
+---
+
+### ETAPA 6: FRAMEWORKS FRONT-END
+
+**Aula 26: Introdução ao React**
+- O que é React?
+- Criando um projeto React com Create React App
+
+**Aula 27: Componentes em React**
+- Conceito de componentes
+- Props e estado
+
+**Aula 28: Ciclo de Vida dos Componentes**
+- Hooks (useEffect, useState)
+- Gerenciamento de efeitos colaterais
+
+**Aula 29: Router no React**
+- Configuração do React Router
+- Navegação entre páginas
+
+---
+
+### ETAPA 7: TESTES E BOAS PRÁTICAS
+
+**Aula 30: Introdução a Testes**
+- O que são testes em software?
+- Benefícios dos testes automatizados
+
+**Aula 31: Testando com Jest**
+- Criando testes unitários com Jest
+- Estrutura básica de testes
+
+**Aula 32: Padrões de Projeto em JavaScript**
+- Padrões comuns (Module, Observer, Singleton)
+- Quando e como aplicar padrões
+
+**Aula 33: Segurança e Performance**
+- Considerações de segurança (XSS, CSRF)
+- Melhores práticas de performance (otimização de loops, carregamento)
+
+---
+
+### ETAPA 8: PROJETO FINAL
+
+**Aula 34: Planejamento do Projeto Final**
+- Escolher o tipo de aplicação (ex: e-commerce, blog)
+- Definir as funcionalidades e tecnologia a usar
+
+**Aula 35: Desenvolvimento do Projeto**
+- Criação da estrutura do projeto
+- Implementação do frontend e backend
+
+**Aula 36: Documentação e Apresentação**
+- Documentar o projeto
+- Preparar a apresentação do projeto final
