@@ -4,37 +4,40 @@
 // "Negativo" se for menor que zero,
 // "Zero" se for igual a zero.
 function verificarNumero(n) {
-  if (n<0){
-    console.log("Negativo")
-  }else if (n>0){
-   console.log("Positivo") 
-  }else{
-    console.log("Zero")
+  if (n < 0) {
+    console.log("Negativo");
+  } else if (n > 0) {
+    console.log("Positivo");
+  } else {
+    console.log("Zero");
   }
 }
-verificarNumero(3)
-
+verificarNumero(3);
 
 // ✅ Desafio 2 – Par ou Ímpar
 // Crie uma função que recebe um número e retorna true se for par, e false se for ímpar.
 function ehPar(n) {
-  return n%2 === 0 
+  return n % 2 === 0;
 }
-console.log(ehPar(2))
+console.log(ehPar(2));
 
 // ✅ Desafio 3 – Contagem até 10
 // Crie uma função que usa um for para imprimir os números de 1 a 10.
 function contarAte10() {
- for(let i = 1 ; i <=10 ; i++){
-    console.log(i)
- }
+  for (let i = 1; i <= 10; i++) {
+    console.log(i);
+  }
 }
-contarAte10()
+contarAte10();
 
 // ✅ Desafio 4 – Contagem regressiva
 // Crie uma função que conta de 10 até 1 usando while.
 function contagemRegressiva() {
-  // seu código aqui
+  let i = 10;
+  while (i >= 1) {
+    console.log(i);
+    i--;
+  }
 }
 
 // ✅ Desafio 5 – Multiplicação simples
