@@ -253,9 +253,3 @@ console.log(alunosAprovados(alunos)); // ["Ana", "Carlos"]
 1. Crie um array com nomes de cidades e use `map` para converter todos os nomes para letras maiúsculas.
 2. Dado um array de números, use `filter` para retornar somente os números que são primos.
 3. Use `reduce` para calcular a média dos números de um array.
-
----
-
-*Aula 9 de 36 – Curso Completo de JavaScript*  
-*Professor: Seu Assistant*  
-*Data: 27/07/2025*  
