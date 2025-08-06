@@ -27,3 +27,4 @@ console.log(todosJSON); //mostra tudo em formato string
 //converter json para uma lista - uma variavel
 const todosList = JSON.parse(todosJSON);
 console.log(todosList);
+
